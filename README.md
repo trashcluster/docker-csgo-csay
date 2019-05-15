@@ -42,3 +42,5 @@ If you want to learn more about configuring a CS:GO server check this [documenta
 <sup>1</sup> The image is too large (> 10 GBs) to be created using automated build and is therefor pushed manually.
 
 README.md is a copy-paste of cm2network's docker hub README, for any more info refer to it.
+
+https://hub.docker.com/r/trashcluster/csgo-csay
