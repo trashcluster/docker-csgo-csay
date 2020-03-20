@@ -2,7 +2,7 @@
 # Dockerfile that contains SteamCMD
 ############################################################
 FROM debian:stretch-slim
-LABEL maintainer="walentinlamonos@gmail.com"
+LABEL maintainer="info@trashcluster.com"
 
 # Install, update & upgrade packages
 # Create user for the server
@@ -52,7 +52,7 @@ cd /home/steam/csgo-dedicated/csgo && \
     curl -s -o /tmp/tmp.zip http://www.esport-tools.net/download/CSay-CSGO.zip && \
     unzip /tmp/tmp.zip -d /home/steam/csgo-dedicated/csgo && \
     rm /tmp/tmp.zip && \
-    curl -k -s -o /tmp/tmp.zip vps.gopnik.net:6800/csgo_esl_serverconfig.zip && \
+    curl -k -s -o /tmp/tmp.zip https://gfx.esl.eu//media/counterstrike/csgo/downloads/configs/csgo_esl_serverconfig.zip && \
     unzip /tmp/tmp.zip -d /home/steam/csgo-dedicated/csgo/cfg && \
     rm /tmp/tmp.zip
 
