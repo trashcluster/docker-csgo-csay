@@ -50,7 +50,7 @@ RUN ./home/steam/steamcmd/steamcmd.sh +login anonymous \
 RUN cd /home/steam/csgo-dedicated/csgo && \
     curl -s -o /tmp/tmp.zip http://www.esport-tools.net/download/CSay-CSGO.zip && \
     unzip /tmp/tmp.zip -d /home/steam/csgo-dedicated/csgo && \
-    rm /tmp/tmp.zip && \
+    rm /tmp/tmp.zip
     
 RUN cd /home/steam/csgo-dedicated/csgo && \
     curl -k -s -o /tmp/tmp.zip https://gfx.esl.eu//media/counterstrike/csgo/downloads/configs/csgo_esl_serverconfig.zip && \
