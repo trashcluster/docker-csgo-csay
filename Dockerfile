@@ -45,13 +45,14 @@ RUN ./home/steam/steamcmd/steamcmd.sh +login anonymous \
 		echo 'force_install_dir /home/steam/csgo-dedicated/'; \
 		echo 'app_update 740'; \
 		echo 'quit'; \
-} > /home/steam/csgo-dedicated/csgo_update.txt && \
-cd /home/steam/csgo-dedicated/csgo && \ 
-    curl https://raw.githubusercontent.com/CM2Walki/CSGO/master/etc/cfg.tar.gz -o cfg.tar.gz && \
-    tar -xf cfg.tar.gz && rm cfg.tar.gz && \
+} > /home/steam/csgo-dedicated/csgo_update.txt
+
+RUN cd /home/steam/csgo-dedicated/csgo && \
     curl -s -o /tmp/tmp.zip http://www.esport-tools.net/download/CSay-CSGO.zip && \
     unzip /tmp/tmp.zip -d /home/steam/csgo-dedicated/csgo && \
     rm /tmp/tmp.zip && \
+    
+RUN cd /home/steam/csgo-dedicated/csgo && \
     curl -k -s -o /tmp/tmp.zip https://gfx.esl.eu//media/counterstrike/csgo/downloads/configs/csgo_esl_serverconfig.zip && \
     unzip /tmp/tmp.zip -d /home/steam/csgo-dedicated/csgo/cfg && \
     rm /tmp/tmp.zip
